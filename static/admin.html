@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+        <script type="text/javascript" src="../setTimes.js"></script>
+        <title>Admin Page</title>
+    </head>
+    <body>
+        <div style="justify-content: center;">
+            <h1>Select Available Times</h1>
+            <br />
+            <br />
+            <input type="checkbox" id="1pm" name="1pm" />
+            <label for="1pm"> 1pm </label> <br />
+            <input type="checkbox" id="2pm" name="2pm" />
+            <label for="2pm"> 2pm </label> <br />
+            <input type="checkbox" id="3pm" name="3pm" />
+            <label for="3pm"> 3pm </label> <br />
+            <input type="checkbox" id="4pm" name="4pm" />
+            <label for="4pm"> 4pm </label> <br />
+            <input type="checkbox" id="5pm" name="5pm" />
+            <label for="5pm"> 5pm </label> <br />
+            <input type="checkbox" id="6pm" name="6pm" />
+            <label for="6pm"> 6pm </label> <br />
+            <input type="checkbox" id="7pm" name="7pm" />
+            <label for="7pm"> 7pm </label> <br />
+            <input type="checkbox" id="8pm" name="8pm" />
+            <label for="8pm"> 8pm </label> <br />
+            <input type="checkbox" id="9pm" name="9pm" />
+            <label for="9pm"> 9pm </label> <br />
+            <input type="checkbox" id="10pm" name="10pm" />
+            <label for="10pm"> 10pm </label> <br />
+            <br />
+            <button id="setTimes">Save</button>
+        </div>
+        <script>
+            $(document).ready(
+                $(document).on('click', '#setTimes', function() {
+                    // find all selected times and pass them to setTimes function
+                    let checks = $('input').toArray();
+                    let times = [];
+                    for (c in checks) {
+                        if (c.is(":checked")) {
+                            times.add(c.attr('id'))
+                        }
+                    }
+                    setTimes(true, times, null);
+                })
+            )
+        </script>
+    </body>
+</html>
