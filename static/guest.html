@@ -45,11 +45,11 @@
             $(document).ready(
                 $(document).on('click', '#setTimeSlot', function() {
                     var guestName = String($("#nameField").val());
-                        let checks = $('input').toArray();     //grabs select slots and adds to slot array to set the slots in the guest table
-                        let meetingslots = [];
-                        for (c in checks) {
+                        let checking = $('input').toArray();     //grabs select slots and adds to slot array to set the slots in the guest table
+                        let meetingTimes = [];
+                        for (c in checking) {
                             if (c.is(":checked")) {
-                                meetingslots.add(c.attr('id'))
+                                meetingTimes.add(c.attr('id'))
                             }
                         }
                         setTimeSlot(false, meetingslots, guestName);

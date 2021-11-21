@@ -9,11 +9,11 @@ function getTimes() {
     conn.connect();
 
     var TimesforAdmin = '';
-    TimesforAdmin += "<h1>Admin Times Selected</h1>";
+    TimesforAdmin += "<h1>Admin Times Selected</h1>";//adding Time slots for Admin
     TimesforAdmin += "<br />";
     TimesforAdmin += "<br />";
 
-    conn.query( 'SELECT * FROM TimesforAdmin',
+    conn.query( 'SELECT * FROM TimesforAdmin', //selecting slots
         (err, rows, fields) => {
             if (err) {
                 console.log(err);

@@ -45,10 +45,10 @@
             $(document).ready(
                 $(document).on('click', '#Times', function() {
                     let checks = $('input').toArray();
-                    let timesAvailable = [];
+                    let AvailableTimes = [];
                     for (c in checks) {
                         if (c.is(":checked")) {
-                            timesAvailable.add(c.attr('id'))
+                            AvailableTimes.add(c.attr('id'))
                         }
                     }
                     Times(true, timesAvailable, null);
