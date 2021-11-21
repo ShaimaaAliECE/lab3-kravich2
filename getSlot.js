@@ -1,9 +1,9 @@
 function getTimes() {
     let conn = mysql.createConnection({
-        host: '34.72.236.12',
+        host: '34.67.72.229',
         user: 'root',
         password: 'password',
-        database: 'MyStoreDB',
+        database: 'KeerthensDB',
     });
     
     conn.connect();
@@ -28,7 +28,7 @@ function getTimes() {
 
     var guestTimes = '';
     guestTimes += "<br />"
-    guestTimes += "<h1>Times Selected By Guests</h1>";
+    guestTimes += "<h1>Selected Times By Guests</h1>";
     guestTimes += "<br />";
     guestTimes += "<br />";
 

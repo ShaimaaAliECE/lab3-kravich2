@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+        <script type="text/javascript" src="../setTimes.js"></script>
+        <title>Guest Page</title>
+    </head>
+    <body>
+        <style>
+            body {
+                background-color: rgb(153, 150, 147);
+                justify-content: center;
+                margin-left: 45%;
+                margin-top: 10%;
+            }
+            button {
+                background-color: rgb(143, 110, 224);
+                border-radius: 7%;
+            }
+            input {
+                border-radius: 0.5%;
+                margin-bottom: 1%;
+            }
+        </style>
+        
+            <h4>User Name</h4>
+            <input id="#nameField" />
+            
+            <h4>Select Available Time</h4>
+            
+            <input type="checkbox" id="1" />
+            <input type="checkbox" id="2" />
+            <input type="checkbox" id="3"  />
+            <input type="checkbox" id="4"  />
+            <input type="checkbox" id="5" />
+            <input type="checkbox" id="6" />
+            <input type="checkbox" id="7" />
+            <input type="checkbox" id="8" />
+            <input type="checkbox" id="9" />
+            <input type="checkbox" id="10" />
+    
+            <br />
+            <button id="setSlot">Save</button>
+        </div>
+        <script>
+            $(document).ready(
+                $(document).on('click', '#setSlot', function() {
+                    var guestName = String($("#nameField").val());
+                        let checks = $('input').toArray();     //grabs select slots and adds to slot array to set the slots in the guest table
+                        let meetingslots = [];
+                        for (c in checks) {
+                            if (c.is(":checked")) {
+                                meetingslots.add(c.attr('id'))
+                            }
+                        }
+                        setSlot(false, meetingslots, guestName);
+                    }
+                )
+            )
+        </script>
+    </body>
+</html>

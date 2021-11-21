@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+        <title>Welcome Page</title>
+    </head>
+    <body>
+        <style>
+            body {
+                background-color: rgb(172, 167, 161);
+                justify-content: center;
+                margin-left: 45%;
+                margin-top: 10%;
+                margin-right: 45%;
+                margin-bottom: 10%;
+            }
+            button {
+                background-color: rgb(182, 160, 243);
+                border-radius: 7%;
+                justify-content: center;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+            }
+            input {
+                border-radius: 1.5%;
+                margin-bottom: 2%;
+            }
+        </style>
+        <div>
+            <h1>Doodle</h1>
+            <br />
+            <h5>Username for Admin</h5>
+            <input id="#inputfield" />
+            <br />
+            <h5>Password for Admin (Password is "Password")</h5>
+            <input id="#password" />
+            <br />
+            <button>Login</button>
+            <br />        
+            <br />
+            <br />
+            <a href='/guest.html'>Continuing as Guest Option</a>
+            <br />
+
+            
+           
+        </div>
+        <script>
+            $(document).ready(
+                $(document).on('input', '#password', function() {
+                    let $field = $('#password')
+                    if (String($field.val())=='Password') {
+                        $field.attr('href', '/admin.html') //code for password to make sure it is actually "password"
+                    } 
+                }),
+        );
+        </script>
+    </body>
+</html>

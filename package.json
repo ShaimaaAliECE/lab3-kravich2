@@ -1,20 +1,20 @@
 {
-    "name": "lab3",
-    "version": "1.0.0",
-    "description": "lab3",
-    "main": "index.js",
-    "dependencies": {
-      "express": "^4.17.1",
-      "mysql": "^2.18.1"
-    },
-    "devDependencies": {},
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-      "type": "git",
-      "url": "lab3-kravich2"
-    },
-    "author": "kravich2",
-    "license": "ISC"
-  }
+  "name": "lab3-kravich2",
+  "version": "1.0.0",
+  "description": "lab3",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "lab3-kravich2"
+  },
+  "author": "kravich2",
+  "license": "ISC"
+}

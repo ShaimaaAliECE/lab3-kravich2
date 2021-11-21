@@ -9,37 +9,35 @@
         <title>Admin Page</title>
     </head>
     <body>
-        <div style="justify-content: center;">
-            <h1>Select Available Times</h1>
+       
+            <h1>Select Times Availabel</h1>
             <br />
             <br />
-            <input type="checkbox" id="1pm" name="1pm" />
+            <input type="checkbox" id="1PM" name="1PM" />
             <label for="1pm"> 1pm </label> <br />
-            <input type="checkbox" id="2pm" name="2pm" />
+            <input type="checkbox" id="2PM" name="2PM" />
             <label for="2pm"> 2pm </label> <br />
-            <input type="checkbox" id="3pm" name="3pm" />
+            <input type="checkbox" id="3PM" name="3PM" />
             <label for="3pm"> 3pm </label> <br />
-            <input type="checkbox" id="4pm" name="4pm" />
+            <input type="checkbox" id="4PM" name="4PM" />
             <label for="4pm"> 4pm </label> <br />
-            <input type="checkbox" id="5pm" name="5pm" />
+            <input type="checkbox" id="5PM" name="5PM" />
             <label for="5pm"> 5pm </label> <br />
-            <input type="checkbox" id="6pm" name="6pm" />
+            <input type="checkbox" id="6PM" name="6PM" />
             <label for="6pm"> 6pm </label> <br />
-            <input type="checkbox" id="7pm" name="7pm" />
+            <input type="checkbox" id="7PM" name="7PM" />
             <label for="7pm"> 7pm </label> <br />
-            <input type="checkbox" id="8pm" name="8pm" />
+            <input type="checkbox" id="8PM" name="8PM" />
             <label for="8pm"> 8pm </label> <br />
-            <input type="checkbox" id="9pm" name="9pm" />
+            <input type="checkbox" id="9PM" name="9PM" />
             <label for="9pm"> 9pm </label> <br />
-            <input type="checkbox" id="10pm" name="10pm" />
-            <label for="10pm"> 10pm </label> <br />
+            <input type="checkbox" id="10PM" name="10PM" />
             <br />
             <button id="setTimes">Save</button>
-        </div>
+        
         <script>
             $(document).ready(
                 $(document).on('click', '#setTimes', function() {
-                    // find all selected times and pass them to setTimes function
                     let checks = $('input').toArray();
                     let times = [];
                     for (c in checks) {
