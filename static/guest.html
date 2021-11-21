@@ -5,8 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
-        <script type="text/javascript" src="../setTimes.js"></script>
-        <title>Guest Page</title>
+        <script type="text/javascript" src="../setSlot.js"></script>
+        <title>Gueste</title>
     </head>
     <body>
         <style>
@@ -20,16 +20,12 @@
                 background-color: rgb(143, 110, 224);
                 border-radius: 7%;
             }
-            input {
-                border-radius: 0.5%;
-                margin-bottom: 1%;
-            }
         </style>
         
             <h4>User Name</h4>
             <input id="#nameField" />
             
-            <h4>Select Available Time</h4>
+            <h4>Choose Times Available</h4>
             
             <input type="checkbox" id="1" />
             <input type="checkbox" id="2" />
@@ -43,11 +39,11 @@
             <input type="checkbox" id="10" />
     
             <br />
-            <button id="setSlot">Save</button>
+            <button id="setTimeSlot">Save</button>
         </div>
         <script>
             $(document).ready(
-                $(document).on('click', '#setSlot', function() {
+                $(document).on('click', '#setTimeSlot', function() {
                     var guestName = String($("#nameField").val());
                         let checks = $('input').toArray();     //grabs select slots and adds to slot array to set the slots in the guest table
                         let meetingslots = [];
@@ -56,7 +52,7 @@
                                 meetingslots.add(c.attr('id'))
                             }
                         }
-                        setSlot(false, meetingslots, guestName);
+                        setTimeSlot(false, meetingslots, guestName);
                     }
                 )
             )

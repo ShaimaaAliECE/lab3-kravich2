@@ -1,4 +1,4 @@
-export default function setTimes(isAdmin, times, name) {
+export default function setSlot(isAdmin, times, name) {
     let conn = mysql.createConnection({
         host: '34.67.72.229',
         user: 'root',
@@ -7,11 +7,9 @@ export default function setTimes(isAdmin, times, name) {
     });
     
     conn.connect();
-    // allow admin to change times in AdminTimes table
     if (isAdmin) {
-        // delete all current available times
         conn.query(
-            'DELETE FROM AdminTimes',
+            'DELETE FROM TimesforAdmin',//deleting the available current times
             (err, rows, fields) => {
                 if (err) {
                     console.log(err);
@@ -19,10 +17,9 @@ export default function setTimes(isAdmin, times, name) {
             }
         )
         if (times.length > 0) {
-            // add all new available times
-            for (t in times) {
+            for (t in times) {//adding the NEW available times
                 conn.query(
-                    'INSERT INTO AdminTimes VALUES ("' + t + '")',
+                    'INSERT INTO TimesforAdmin VALUES ("' + t + '")',
                     (err, rows, fields) => {
                         if (err) {
                             console.log(err);
@@ -42,7 +39,7 @@ export default function setTimes(isAdmin, times, name) {
                 }
             }
         )
-        if (times.length > 0) {//adding new times
+        if (times.length > 0) {//new times adding
             conn.query(
                 'INSERT INTO GuestAvailabilities VALUES ("' + name + '", ' + t + '")',
                 (err, rows, fields) => {

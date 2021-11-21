@@ -4,48 +4,54 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
-        <script type="text/javascript" src="../setTimes.js"></script>
+        
         <title>Admin Page</title>
     </head>
     <body>
        
-            <h1>Select Times Availabel</h1>
-            <br />
-            <br />
+            <h1>Select Times Availabele</h1>
+            <br /> <br />
             <input type="checkbox" id="1PM" name="1PM" />
             <label for="1pm"> 1pm </label> <br />
+
             <input type="checkbox" id="2PM" name="2PM" />
             <label for="2pm"> 2pm </label> <br />
+
             <input type="checkbox" id="3PM" name="3PM" />
             <label for="3pm"> 3pm </label> <br />
+
             <input type="checkbox" id="4PM" name="4PM" />
             <label for="4pm"> 4pm </label> <br />
+
             <input type="checkbox" id="5PM" name="5PM" />
             <label for="5pm"> 5pm </label> <br />
+
             <input type="checkbox" id="6PM" name="6PM" />
             <label for="6pm"> 6pm </label> <br />
+
             <input type="checkbox" id="7PM" name="7PM" />
             <label for="7pm"> 7pm </label> <br />
+
             <input type="checkbox" id="8PM" name="8PM" />
             <label for="8pm"> 8pm </label> <br />
+
             <input type="checkbox" id="9PM" name="9PM" />
             <label for="9pm"> 9pm </label> <br />
-            <input type="checkbox" id="10PM" name="10PM" />
-            <br />
-            <button id="setTimes">Save</button>
+            
+            <input type="checkbox" id="10PM" name="10PM" /> <br />
+            <button id="Times">Save</button>
         
         <script>
             $(document).ready(
-                $(document).on('click', '#setTimes', function() {
+                $(document).on('click', '#Times', function() {
                     let checks = $('input').toArray();
-                    let times = [];
+                    let timesAvailable = [];
                     for (c in checks) {
                         if (c.is(":checked")) {
-                            times.add(c.attr('id'))
+                            timesAvailable.add(c.attr('id'))
                         }
                     }
-                    setTimes(true, times, null);
+                    Times(true, timesAvailable, null);
                 })
             )
         </script>

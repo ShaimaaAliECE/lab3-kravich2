@@ -11,24 +11,14 @@ let conn = mysql.createConnection({
 conn.connect();
 
 conn.query(
-    'CREATE TABLE AdminTimes (AvailableTime varchar(10))',
-    (err, rows, fields) => {
-        if (err) {
-            console.log(err);
-        } else {
-            console.log('AdminTimes Created')
-        }
+    'CREATE TABLE TimesforAdmin (AvailableTime varchar(10))',//creating the table
+    (err, rows, fields) => {if (err) {console.log(err);} else { console.log('AdminTimes Created')}
     }
 )
 
 conn.query(
     'CREATE TABLE GuestAvailabilities (GuestName varchar(30), AvailableTime varchar(10))',
-    (err, rows, fields) => {
-        if (err) {
-            console.log(err);
-        } else {
-            console.log('GuestAvailabilities Created')
-        }
+    (err, rows, fields) => { if (err) {console.log(err); } else {console.log('GuestAvailabilities Created') }
     }
 )
 
